@@ -4,6 +4,9 @@ import { Fragment } from 'react'
 const prisma = new PrismaClient()
 
 export async function getStaticProps() {
+  // deletes the data
+  // await prisma(dot)cupping(dot)deleteMany()//
+  
   const cuppings = await prisma.cupping.findMany({
     select: {
       id: true,
@@ -22,7 +25,11 @@ export async function getStaticProps() {
       notes: true,
       createdAt: true,
     },
-  })
+
+    
+  } )
+
+ 
 
   const formattedCuppings = cuppings.map((cupping) => ({
     ...cupping,
