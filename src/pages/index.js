@@ -22,7 +22,7 @@ function Home() {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: ({ sampleName, roastLevel, fragranceAroma, flavor, afterTaste, acidity, body, balance, uniformity, cleanCup, sweetness, overall, notes }),
+      body: JSON.stringify({ sampleName, roastLevel, fragranceAroma, flavor, afterTaste, acidity, body, balance, uniformity, cleanCup, sweetness, overall, notes })
     })
 
     

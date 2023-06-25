@@ -2,6 +2,7 @@ const { PrismaClient } = require('@prisma/client')
 
 const prisma = new PrismaClient()
 
+console.log('enterd ');
 export default async function handler(req, res) {
     let {   sampleName, roastLevel, fragranceAroma,  flavor, afterTaste,acidity,body,balance,uniformity,cleanCup,sweetness,overall,notes,} = req.body
   
