@@ -22,14 +22,12 @@ function Home() {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ sampleName, roastLevel, fragranceAroma, flavor, afterTaste, acidity, body, balance, uniformity, cleanCup, sweetness, overall, notes }),
+      body: ({ sampleName, roastLevel, fragranceAroma, flavor, afterTaste, acidity, body, balance, uniformity, cleanCup, sweetness, overall, notes }),
     })
 
-    const data = await response.json()
+    
 
-    console.log(data)
 
-    console.log(parseFloat(fragranceAroma) + parseFloat(flavor) + parseFloat(afterTaste) + parseFloat(acidity) + parseFloat(body) + parseFloat(balance) + parseFloat(uniformity) + parseFloat(cleanCup) + parseFloat(sweetness) + parseFloat(overall));
 
     alert('Form submitted!');
   };
