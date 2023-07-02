@@ -1,5 +1,3 @@
-import { join } from '@prisma/client/runtime';
-import { json } from 'express';
 
 const { PrismaClient } = require('@prisma/client')
 
